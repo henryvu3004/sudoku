@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f7fb"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Sudoku">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css"><title>Sudoku — Tĩnh tại trong từng ô số</title>
+</head>
+<body>
+<main class="app">
+<header><div><div class="eyebrow">MIND GAMES · DAILY PUZZLE</div><h1>Sudoku<span>.</span></h1><p class="subtitle">Tĩnh tại trong từng ô số.</p></div><button id="themeBtn" class="icon-btn" aria-label="Đổi giao diện">◐</button></header>
+<section class="topline"><div><span class="muted">ĐỘ KHÓ</span><select id="difficulty" aria-label="Độ khó"><option value="easy">Dễ</option><option value="medium" selected>Trung bình</option><option value="hard">Khó</option><option value="expert">Chuyên gia</option></select></div><div class="timerbox"><span class="muted">THỜI GIAN</span><strong id="timer">00:00</strong></div></section>
+<section class="game-card">
+<div class="board-wrap"><div id="board" class="board" role="grid" aria-label="Bàn cờ Sudoku"></div></div>
+<div class="status-row"><span id="status">Chọn một ô để bắt đầu</span><span id="mistakes">Lỗi: 0/3</span></div>
+</section>
+<section class="controls">
+<div class="number-pad" id="numberPad" aria-label="Chọn số"></div>
+<div class="tool-row">
+<button id="notesBtn" class="tool">✎ <span>Ghi chú</span></button>
+<button id="eraseBtn" class="tool">⌫ <span>Xóa</span></button>
+<button id="undoBtn" class="tool">↶ <span>Hoàn tác</span></button>
+<button id="hintBtn" class="tool">✧ <span>Gợi ý</span></button>
+</div>
+<div class="action-row"><button id="newBtn" class="primary">Ván mới</button><button id="checkBtn" class="secondary">Kiểm tra</button></div>
+</section>
+<footer><span>✦</span> Một chút tập trung, một chút bình yên.</footer>
+</main>
+<div id="modal" class="modal hidden"><div class="modal-card"><div class="success-icon">✦</div><h2 id="modalTitle">Hoàn thành!</h2><p id="modalText">Bạn đã giải xong Sudoku.</p><button id="modalNew" class="primary">Chơi ván mới</button></div></div>
+<script src="app.js"></script>
+</body></html>
